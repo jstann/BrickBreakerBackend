@@ -1,3 +1,13 @@
+/**
+ * Jasmine Tann
+ * 10/01/2024
+ * COMP 167 Computer Programming and Design
+ */
+/**
+ * The BrickBreakerIO file is the class that provides the input and output files for the game to run
+ * It manages the reading and writing of player profiles and  the configuration files given
+ */
+
 package edu.ncat.brickbreakerbackend;
 
 import javafx.scene.paint.Color;
@@ -10,6 +20,7 @@ import java.util.Scanner;
 
 import static javafx.scene.paint.Color.rgb;
 
+
 public class BrickBreakerIO {
     public static Level[] readConfigFile(String configFileName) throws FileNotFoundException {
         File configFile = new File(configFileName);
@@ -17,8 +28,8 @@ public class BrickBreakerIO {
         Level[] levels = new Level[scnr.nextInt()];
 
         for (int i = 0; i < levels.length; i++) {
-            int numLevels = scnr.nextInt();
-            int numBricks = scnr.nextInt();
+            int numLevels = scnr.nextInt(); // Read the level number.
+            int numBricks = scnr.nextInt();// Read the number of bricks.
             Level level = new Level(numLevels, numBricks);
 
             for (int j = 0; j < numBricks; j++) {
